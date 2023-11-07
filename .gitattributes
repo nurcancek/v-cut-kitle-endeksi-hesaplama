@@ -1,2 +1,30 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    int boy=0;
+    double kilo=0;
+    Scanner tara=new Scanner(System.in);
+    System.out.println("vücüt kitle endex programına hoşgeldiniz");
+    System.out.println("lütfen boyunuzu cm cinsinden giriniz");
+    boy= tara.nextInt();
+    System.out.println("lütfen kilonuzu kg cinsinden girin:");
+  kilo=tara.nextDouble();
+    double endeks=0;
+    double cmToMetre=(double) boy /100;
+    double boyunKaresi=Math.pow(cmToMetre,2);
+    endeks=kilo/boyunKaresi;
+    System.out.println("bulunan endeks değeri: " + endeks);
+    if(endeks<18.5){
+      System.out.println("zayıf");
+    }
+    else if(endeks>=18.5 && endeks<25){
+      System.out.println("normal");
+    }
+    else if(endeks>=25 && endeks<=30){
+      System.out.println("fazla kilolu");
+    } else{
+      System.out.println("obez");
+    }
+  }
+    
+  }
